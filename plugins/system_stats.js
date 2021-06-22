@@ -72,6 +72,12 @@ else if (Config.WORKTYPE == 'public') {
         }
     }));
 
+    Asena.addCommand({pattern: 'tools', fromMe: false, desc: Lang.TOOLS_DESC}, (async (message, match) => {
+    await message.sendMessage(
+        '*📲Features Added*\n-------------------------------\n\n*.lovelogo* : ```Eg: .loveimage Rohith```\n\n*.wanted* : ```Make Wanted Poster```\n     ```Eg: .wanted Name;Anything```\n\n*.pubg* : ```Your text like PUBG game```\n ```Eg: .pubg Fazo;Bot```\n\n*.burnpaper* : ```To male a cool Text Image```\n     ```Eg : .burnpaper Name```\n\n*.wood* : ```Eg: .wood Rohith```\n\n*.bf4* : ```Eg: .pb4 Rohith```\n\n*.candlemug* : ``` Eg: .candlemug Rohith```\n\n*.mugflower* : ``` Eg: .mugflower Rohith```\n\n*.narutobanner*:```Eg: .narutobanner Rohith```\n\n*.papperongrass*:```Eg: .papperongrass Rohith```\n\n*.romancetxt*: ```Eg: .romancetxt Rohith```\n\n*.underwatertxt*:```Eg: .underwatertxt Rohith```\n\n*.sweetcandy*:```Eg : .sweetcandy Rohith```\n\n*.shadow*: ```Eg: .shadow Rohith```\n\n*.8bit*: ```Eg: .8bit Fazo```\n\n*.glitch*: ```Eg: .glitch Fazo```\n\n*.3dtext*: ```Eg: .3dtext Fazo```\n\n*.neonlight*: ```Eg: .neonlight Fazo```\n\n*.ninjalogo*: ```Eg: .ninjalogo Fazo```\n\n*.watercolor*: ```Eg: .watercolor Fazo```\n\n*.sparkling*: ```Eg: .sparkling FazoFaz```\n\n*.harrypotter*: ```Eg: .harrypotter Fazo```*' , MessageType.text
+        );
+    }));
+
     Asena.addCommand({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC}, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
