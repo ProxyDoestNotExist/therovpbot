@@ -3,7 +3,7 @@
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-WhatsAsena - Yusuf Usta
+MayaBoT - Yusuf Usta
 Developer & Co-Founder - Phaticusthiccy
 */
 
@@ -26,7 +26,7 @@ if (Config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,'```Tanrı Türk\'ü Korusun. 🐺 Asena Hizmetinde!```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Telegram Group:* https://t.me/AsenaSupport\n*Telegram Channel:* https://t.me/asenaremaster\n*Plugin Channel:* ' + Config.CHANNEL , MessageType.text);
         }
         else {
-            const pow = '*Powered by WhatsAsena*'
+            const pow = '*Powered by MayaBoT*'
             const payload = Config.ALIVEMSG
             const status = await message.client.getStatus()
             const ppUrl = await message.client.getProfilePicture() 
@@ -54,10 +54,10 @@ else if (Config.WORKTYPE == 'public') {
     Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage(message.jid,'```Tanrı Türk\'ü Korusun. 🐺 Asena Hizmetinde!```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Telegram Group:* https://t.me/AsenaSupport\n*Telegram Channel:* https://t.me/asenaremaster\n*Plugin Channel:* ' + Config.CHANNEL, MessageType.text);
+            await message.client.sendMessage(message.jid,'```Tanrı Türk\'ü Korusun. 🐺 Maya Hizmetinde!```\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*Insta:* https://instagram.com/mu.fazil_\n*Plugin Channel:* ' + Config.CHANNEL, MessageType.text);
         }
         else {
-            const pow = '*Powered by WhatsAsena*'
+            const pow = '*Powered by MayaBoT*'
             const payload = Config.ALIVEMSG
             const status = await message.client.getStatus()
             const ppUrl = await message.client.getProfilePicture() 
