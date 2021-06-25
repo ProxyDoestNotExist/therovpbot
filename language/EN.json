@@ -458,6 +458,21 @@
             "HIDDEN": "Hidden",
             "NOT_FOUND": "*Media Not Found!*"
         },
+        "insta": {
+            "NEED_WORD": "*Please enter username of any instagram account.*",
+            "USAGE": ".insta <userName>",
+            "DESC": "Fetches user informations from instagram",
+            "LOADING": "Fetching user data...\n please wait.",
+            "USERNAME": "Username",
+            "NAME": "🔖 Name",
+            "BIO": "📄 Biography",
+            "FOLLOWERS": "👣 Followers",
+            "FOLLOWS": "👥 Follows",
+            "ACCOUNT": "👁️ Account privacy",
+            "PUBLIC": "🔓 Public",
+            "HIDDEN": "🔒 Hidden",
+            "PROPIC": "🖼 Profile Pic"
+        },
         "github": {
             "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github phaticusthiccy",
             "REPLY": "```You Need To Type Any Username!```",
