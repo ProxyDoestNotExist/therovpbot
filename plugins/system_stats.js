@@ -78,6 +78,12 @@ else if (Config.WORKTYPE == 'public') {
         );
     }));
 
+    Asena.addCommand({pattern: 'tools2', fromMe: false, desc: Lang.TOOLS_DESC}, (async (message, match) => {
+     await message.sendMessage(
+        '*🖌️Text Tools*\n\n *sandwriting*\n*cloud :* .cloud Fazil\n*phub :* .phub Any;text\n*snow*\n*blood*\n*luxury*\n*gradient*\n*vintagi*\n*summery*\n*darkgold*\n*1917*\n*holo*\n*silver*\n*blue*\n*fabric*\n*avengers*\n*logomarvel*\n*silvermetal*\n*glue*\n*balloon*\n*rosegold*\n*metalgold*\n*lion*\n*galaxy*\n*logojocker*\n*leaves*\n*skull*\n*robot*\n*toxic*\n*bow*\n*orangeglass*\n*marvel*' , MessageType.text
+        );
+    }));
+
     Asena.addCommand({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC}, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
