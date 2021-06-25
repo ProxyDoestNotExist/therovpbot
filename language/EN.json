@@ -262,9 +262,7 @@
             "HUMI": "Humidity",
             "WIND": "Wind Speed",
             "CLOUD": "Cloud",
-            "NOT_FOUND": "```I couldn't find a city with this name. 😖```"
-            "DOWNLOAD": "Download",
-            "SIZE": "Size:",
+            "NOT_FOUND": "```I couldn't find a city with this name. 😖```",
             "MODD_DESC": "Get modded app details from MODDROID.",
             "HMODD_DESC": "Get modded app details from HappyMod.",
             "NEED_APPNAME": "*Invalid Request,Provide an app name*",
