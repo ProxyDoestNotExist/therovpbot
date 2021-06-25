@@ -1,3 +1,9 @@
+const Asena = require('../events');
+const {MessageType} = require('@adiwajshing/baileys');
+/*const got = require('got');
+const fs = require('fs');*/
+const axios = require('axios');
+
 Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .song is not giving results"}, async (message, match) => {
 
     const userName = match[1]
