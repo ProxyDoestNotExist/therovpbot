@@ -271,8 +271,12 @@
             "MODD_DESC": "Get modded app details from MODDROID.",
             "HMODD_DESC": "Get modded app details from HappyMod.",
             "NEED_APPNAME": "*Invalid Request,Provide an app name*",
-            "NOT_FOUNDMD": "```Sorry,I could not find such an app.\n Try using .happymod if .modd is not working 😖```"
-    },
+            "NOT_FOUNDMD": "```Sorry,I could not find such an app.\n Try using .happymod if .modd is not working 😖```",
+            "IGTVDESC":"Download videos from IGTV link",
+            "NEED_WORDIGTV":"Please provide the IGTV link",
+            "LOADINGTV":"Loading...",
+            "NOT_FOUNDIG":"Insta video not found"
+        },
         "web": {
             "SPEEDTEST_DESC": "Measures Download and Upload speed.",
             "SPEEDTESTING": "```Running speed test...```",
