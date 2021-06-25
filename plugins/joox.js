@@ -13,7 +13,7 @@ Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .so
     await message.sendMessage(infoMessage("Loading..."))
 
     await axios
-      .get(`https://docs-jojo.herokuapp.com/api/yt-play?q=${userName}`)
+      .get(`https://api.xteam.xyz/dl/ytmp3?url=${userName}`)
       .then(async (response) => {
         const {
           title,
