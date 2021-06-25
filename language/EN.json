@@ -263,7 +263,6 @@
             "WIND": "Wind Speed",
             "CLOUD": "Cloud",
             "NOT_FOUND": "```I couldn't find a city with this name. 😖```"
-            "MODINFO": "ModInfo",
             "DOWNLOAD": "Download",
             "SIZE": "Size:",
             "MODD_DESC": "Get modded app details from MODDROID.",
