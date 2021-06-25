@@ -4,6 +4,37 @@ const {MessageType} = require('@adiwajshing/baileys');
 const fs = require('fs');*/
 const axios = require('axios');
 
+Asena.addCommand({ pattern: 'joox ?(.*)', fromMe: false, dontAddCommandList: true}, async (message, match) => {
+
+    const userName = match[1]
+
+    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORDIGTV))
+
+    await message.sendMessage(infoMessage("Loading"))
+
+    await axios
+      .get(`https://gratisancok.herokuapp.com/api/joox/?kata=${userName}&apikey=ZailaniGans`)
+      .then(async (response) => {
+        const {
+          mp3_url,
+          judul,
+	artist,
+	album,	
+        } = response.data.result.result
+
+        const profileBuffer = await axios.get(mp3_url, {responseType: 'arraybuffer'})
+
+        const msg = `${"Title"}*: ${judul}\n${"Artist"}*: ${artist}\n${"Album"}*: ${album}\n${mp3_url}`
+
+	 await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.document)
+	    await message.sendMessage(message.jid,msg, MessageType.document,)
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage("Error.Please check the song name.")),
+      )
+  },
+)
+
 Asena.addCommand({ pattern: 'mp3yt ?(.*)', fromMe: false, desc: "Try this if .song is not giving results"}, async (message, match) => {
 
     const userName = match[1]
