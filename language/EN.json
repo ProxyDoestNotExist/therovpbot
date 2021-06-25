@@ -263,7 +263,14 @@
             "WIND": "Wind Speed",
             "CLOUD": "Cloud",
             "NOT_FOUND": "```I couldn't find a city with this name. 😖```"
-        },
+            "MODINFO": "ModInfo",
+            "DOWNLOAD": "Download",
+            "SIZE": "Size:",
+            "MODD_DESC": "Get modded app details from MODDROID.",
+            "HMODD_DESC": "Get modded app details from HappyMod.",
+            "NEED_APPNAME": "*Invalid Request,Provide an app name*",
+            "NOT_FOUNDMD": "```Sorry,I could not find such an app.\n Try using .happymod if .modd is not working 😖```",
+    },
         "web": {
             "SPEEDTEST_DESC": "Measures Download and Upload speed.",
             "SPEEDTESTING": "```Running speed test...```",
@@ -460,7 +467,7 @@
         },
         "insta": {
             "NEED_WORD": "*Please enter username of any instagram account.*",
-            "USAGE": ".insta <userName>",
+            "USAGE": ".instap <userName>",
             "DESC": "Fetches user informations from instagram",
             "LOADING": "Fetching user data...\n please wait.",
             "USERNAME": "Username",
