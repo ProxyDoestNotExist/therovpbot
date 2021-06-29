@@ -24,7 +24,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
         if (message.reply_message !== false) {
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/fazbot/media/gif/Banned.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Banned.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```You Have Been Banned By Maya! 🤭```" }
             )
@@ -37,7 +37,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
             });
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/fazbot/media/gif/Banned.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Banned.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```You Have Been Banned By Maya! 🤭```" }
             )
