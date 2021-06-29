@@ -20,7 +20,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
 
     if (Config.BANMSG == 'default') {
-        if (message.reply_message !== false) {
+        if (message.reply_message !== true) {
             await message.client.sendMessage(
                 message.jid, 
                 fs.readFileSync("/root/fazbot/media/gif/Banned.mp4"),
