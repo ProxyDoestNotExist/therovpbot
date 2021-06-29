@@ -23,11 +23,11 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
         if (message.reply_message !== false) {
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Edited_20210227_152650.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Banned.mp4"),
                 MessageType.video, 
-                { mimetype: Mimetype.gif, caption: "FelixBlack Tarafından Banlandın!" }
+                { mimetype: Mimetype.gif, caption: "You Have Been Banned By Maya! 🤭" }
             )
-            await message.client.sendMessage(message.jid,'```Haha Loser``` ' +'@' + message.reply_message.data.participant.split("@")[0] + ' 😈', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'```I am Banned You 😁. Get out from my Group🏃‍♂️``` ' +'@' + message.reply_message.data.participant.split("@")[0] + ' 😈', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupRemove(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
@@ -38,9 +38,9 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
                 message.jid, 
                 fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Banned.mp4"),
                 MessageType.video, 
-                { mimetype: Mimetype.gif, caption: "FelixBlack Tarafından Banlandın!" }
+                { mimetype: Mimetype.gif, caption: "```You Have Been Banned By Maya! 🤭```" }
             )
-            await message.client.sendMessage(message.jid,'```Haha Loser``` ' + etiketler + ' 😈', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
+            await message.client.sendMessage(message.jid,'```I am Banned You 😁. Get out from my Group🏃‍♂️``` ' + etiketler + ' 😈', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
             await message.client.groupRemove(message.jid, message.mention);
         } else {
             return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
