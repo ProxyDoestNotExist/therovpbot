@@ -115,7 +115,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Maya Promoted You!🥰```" }
             )
-            await message.client.sendMessage(message.jid,'```Buna Sevinmelisin``` ' + '@' + message.reply_message.data.participant.split("@")[0] + ' 🎉', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'```😍 നീയും ഇനി ഈ ഗ്രൂപ്പ് ഭരിക്കും 💞``` ' + '@' + message.reply_message.data.participant.split("@")[0] + ' 🎉', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupMakeAdmin(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
@@ -134,7 +134,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Maya Promoted You!🥰```" }
             )
-            await message.client.sendMessage(message.jid,'```Buna Sevinmelisin``` ' + etiketler + ' 🎉', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
+            await message.client.sendMessage(message.jid,'```😍 നീയും ഇനി ഈ ഗ്രൂപ്പ് ഭരിക്കും 💞``` ' + etiketler + ' 🎉', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
             await message.client.groupMakeAdmin(message.jid, message.mention);
         } else {
             return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
@@ -184,7 +184,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Maya Demoted You!🤭```" }
             )
-            await message.client.sendMessage(message.jid,'```Şansına Küs``` ' + '@' + message.reply_message.data.participant.split("@")[0] + ' 😈', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'```😒 നീ അങ്ങനെ അഡ്മിൻ ആവേണ്ട 😏``` ' + '@' + message.reply_message.data.participant.split("@")[0] + ' 😈', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupDemoteAdmin(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
@@ -202,7 +202,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Maya Demoted You!🤭```" }
             )
-            await message.client.sendMessage(message.jid,'```Şansına Küs``` ' + etiketler + ' 😈', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
+            await message.client.sendMessage(message.jid,'```😒 നീ അങ്ങനെ അഡ്മിൻ ആവേണ്ട 😏``` ' + etiketler + ' 😈', MessageType.text, {contextInfo: {mentionedJid: message.mention}});
             await message.client.groupDemoteAdmin(message.jid, message.mention);
         } else {
             return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
