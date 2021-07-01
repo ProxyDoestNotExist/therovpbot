@@ -428,7 +428,7 @@ if (config.WORKTYPE == 'private') {
                 return;
     
             let 
-                LANG = config.LANG.toLowerCase(),
+                LANG = 'hi',
                 ttsMessage = match[1],
                 SPEED = 1.0
 
@@ -603,7 +603,7 @@ if (config.WORKTYPE == 'private') {
       },
     )
 
-    Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: Slang.LY_DESC }, (async (message, match) => { 
+    Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true }, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
 
@@ -618,7 +618,7 @@ if (config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: "covid ?(.*)", fromMe: true, desc: Clang.COV_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
         if (match[1] === "") {
             try{
                 //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
@@ -696,7 +696,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/India").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`🇮🇳 *ഇന്ത്യയിലെ വിവരങ്ങൾ:*\n😷 *ആകെ കേസുകൾ:* ${resp.cases}\n🏥 *ഇന്നത്തെ കേസുകൾ:* ${resp.todayCases}\n⚰️ *ആകെ മരിച്ചവർ:* ${resp.deaths}\n☠️ *ഇന്ന് മരിച്ചവർ:* ${resp.todayDeaths}\n💊 *ആകെ രോഗമുക്തി:* ${resp.recovered}\n😷 *സജീവ കേസുകൾ:* ${resp.active}\n🆘 *ഗുരുതര കേസുകൾ:* ${resp.critical}\n🧪 *ആകെ പരിശോധന:* ${resp.totalTests}`);
+                    await message.reply(`🇮🇳 *भारत के लिए डेटा:*\n😷 *कुल मामले:* ${resp.cases}\n🏥 *दैनिक मामले:* ${resp.todayCases}\n⚰️ *कुल मौतें:* ${resp.deaths}\n☠️ *रोज की मौत:* ${resp.todayDeaths}\n💊 *कुल बरामद:* ${resp.recovered}\n😷 *एक्टिव केस:* ${resp.active}\n🆘 *गंभीर मामले:* ${resp.critical}\n🧪 *कुल टेस्ट:* ${resp.totalTests}`);
 
                 });
 
@@ -895,7 +895,7 @@ else if (config.WORKTYPE == 'public') {
             return;
     
         let 
-            LANG = config.LANG.toLowerCase(),
+            LANG = 'hi',
             ttsMessage = match[1],
             SPEED = 1.0
 
@@ -1070,7 +1070,7 @@ else if (config.WORKTYPE == 'public') {
       },
     )
 
-    Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: false, desc: Slang.LY_DESC }, (async (message, match) => {
+    Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: false }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
 
@@ -1085,7 +1085,7 @@ else if (config.WORKTYPE == 'public') {
 
     }));
 
-    Asena.addCommand({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: "covid ?(.*)", fromMe: false}, (async (message, match) => {
         if (match[1] === "") {
             try{
                 //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
