@@ -59,7 +59,7 @@ else if (Config.WORKTYPE == 'public') {
   
       var ttinullimage = await axios.get('https://api.zeks.xyz/api/emoji-image?apikey=odsMYXx67ZhT38w5hp5mgRKO8En&emoji='+ uri, { responseType: 'arraybuffer' })
   
-      await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢 Maya 💝🔥'})
+      await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '★ 𝙼𝚊𝚍𝚎 𝚋𝚢: Ask Your Mom'})
   
     }));
 }
