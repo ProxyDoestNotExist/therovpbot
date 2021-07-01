@@ -17,13 +17,13 @@
 */
 
 function successfullMessage(msg) {
-    return "✅ *Maya BoT*:  ```" + msg + "```"
+    return "✅ *DS BOT*:  ```" + msg + "```"
 }
 function errorMessage(msg) {
-    return "🛑 *Maya BoT*:  ```" + msg + "```"
+    return "🛑 *DS BOT*:  ```" + msg + "```"
 }
 function infoMessage(msg) {
-    return "⏺️ *Maya BoT*:  ```" + msg + "```"
+    return "⏺️ *DS BOT*:  ```" + msg + "```"
 }
 
 
