@@ -28,7 +28,7 @@ Asena.addCommand({ pattern: 'pint ?(.*)', fromMe: false,  desc: "Gives you a pic
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
           caption: msg
         })
-            await message.sendMessage(message.jid, msg,MessageType.text,{quoted:message.data})
+            await message.sendMessage(message.jid, msg,MessageType.image,{quoted:message.data})
       })
       .catch(
         async (err) => await message.sendMessage(""),
