@@ -1,10 +1,10 @@
 {
-    "name": "mayabot",
-    "description": "MayaBoT project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
-    "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
+    "name": "DarkShadow",
+    "description": "DarkShadow project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
+    "logo": "https://i.ibb.co/Yyt8M5D/artworks-000531302304-dvrblx-t500x500.jpg",
     "keywords": ["whatsapp", "userbot", "Asena", "MayaBoT", "bot", "api", "ai"],
-    "repository": "https://github.com/fazilvk786/fazbot",
-    "website":   "https://t.me/fazilvk",
+    "repository": "https://github.com/ThizPersonDoesNotExist/therovpbot",
+    "website":   "https://t.me/",
     "success_url": "https://t.me/AsenaSupport",
     "stack": "container",
     "env": {
@@ -19,7 +19,7 @@
         "LANGUAGE": {
             "description": "Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => ID, Español => ES, Portuguese => pt, Russian => ru",
             "required": true,
-            "value": "TR"
+            "value": "en"
         },
         "ANTİ_LİNK": {
             "description": "Link Engelleme Sistemi. Link Blocking System.",
