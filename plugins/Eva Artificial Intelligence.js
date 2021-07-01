@@ -216,7 +216,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
         }
 
 }));
-Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (message, match) => {
+Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: true }, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_eva, MessageType.text, { quoted: message.data }) 
     try {
         const file = await message.client.downloadAndSaveMediaMessage({
