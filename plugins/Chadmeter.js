@@ -137,7 +137,7 @@ if (con.LANG === 'HI') {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/rovpbot/media/gif/Chad.mp4"),
+                fs.readFileSync("/root/therovpbot/media/gif/Chad.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*चाड के प्रतिशत की गणना*\n*परिणाम:* ${r_text[i]}` }
             )
@@ -263,7 +263,7 @@ if (con.LANG === 'HI') {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/rovpbot/media/gif/Chad.mp4"),
+                fs.readFileSync("/root/therovpbot/media/gif/Chad.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*चाड के प्रतिशत की गणना *\n*परिणाम:* ${r_text[i]}` }
             )
@@ -393,7 +393,7 @@ else {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/rovpbot/media/gif/Chad.mp4"),
+                fs.readFileSync("/root/therovpbot/media/gif/Chad.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*Chad Meter Calculated!*\n*Result:* ${r_text[i]}` }
             )
@@ -519,7 +519,7 @@ else {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/rovpbot/media/gif/Chad.mp4"),
+                fs.readFileSync("/root/therovpbot/media/gif/Chad.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*Chad Meter Calculated!*\n*Result:* ${r_text[i]}` }
             )
