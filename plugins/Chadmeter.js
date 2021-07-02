@@ -40,7 +40,7 @@ if (con.LANG === 'HI') {
             r_text[6] = "*%6*";
             r_text[7] = "*%7*";
             r_text[8] = "*%8*";
-            r_text[9] = "*%9*";
+            r_text[9] = "*%9*";   
             r_text[10] = "*%10*";
             r_text[11] = "*%11*";
             r_text[12] = "*%12*";
@@ -137,8 +137,8 @@ if (con.LANG === 'HI') {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/therovpbot/media/gif/Chad.mp4"),
-                MessageType.video, 
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Chad.mp4"),
+                MessageType.video,  
                 { mimetype: Mimetype.gif, caption: `*चाड के प्रतिशत की गणना*\n*परिणाम:* ${r_text[i]}` }
             )
         }));
@@ -263,7 +263,7 @@ if (con.LANG === 'HI') {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/therovpbot/media/gif/Chad.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Chad.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*चाड के प्रतिशत की गणना *\n*परिणाम:* ${r_text[i]}` }
             )
@@ -393,7 +393,7 @@ else {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/therovpbot/media/gif/Chad.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Chad.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*Chad Meter Calculated!*\n*Result:* ${r_text[i]}` }
             )
