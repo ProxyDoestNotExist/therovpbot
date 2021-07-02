@@ -908,7 +908,7 @@ else {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/rovpbot/media/gif/giphy.mp4"),
+                fs.readFileSync("/root/therovpbot/media/gif/giphy.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*Gay Meter Calculated!* 🏳️‍🌈\n*Result:* ${r_text[i]}` }
             )
@@ -1034,7 +1034,7 @@ else {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/rovpbot/media/gif/giphy.mp4"),
+                fs.readFileSync("/root/therovpbot/media/gif/giphy.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*Gay Meter Calculated!* 🏳️‍🌈\n*Result:* ${r_text[i]}` }
             )
