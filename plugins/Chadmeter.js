@@ -519,7 +519,7 @@ else {
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/therovpbot/Chad.mp4"),
+                fs.readFileSync("/root/Chad.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*Chad Meter Calculated!*\n*Result:* ${r_text[i]}` }
             )
