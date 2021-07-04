@@ -21,7 +21,10 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: false, desc: IGV_DESC}, asy
         var split = match[1].split('?');
         bottomLink = split[1];
         topLink = split[0];
-}
+} else {
+        topLink = match[1];
+        bottomLink = '';
+    }
 
     await message.sendMessage(infoMessage("Downloading your video..."))
 
@@ -60,7 +63,10 @@ Asena.addCommand({ pattern: 'igimage ?(.*)', fromMe: false, desc: IGI_DESC}, asy
         var split = match[1].split('?');
         bottomLink = split[1];
         topLink = split[0];
-}
+} else {
+        topLink = match[1];
+        bottomLink = '';
+    }
 
     await message.sendMessage(infoMessage("Downloading your image..."))
 
