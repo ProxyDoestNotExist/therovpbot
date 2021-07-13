@@ -11,7 +11,7 @@ const got = require('got');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-Asena.addCommand({pattern: 'zodiac ?(.*)', fromMe: false, desc: Lang.ZODIAC_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'zodiac ?(.*)', fromMe: false,}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_ZOD);
 	const url = `https://horoscope-api.herokuapp.com/horoscope/today/${match[1]}`;
 	try {
