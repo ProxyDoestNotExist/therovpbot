@@ -22,7 +22,7 @@ const Config = require('../config');
 
 const des = "You Can Png From Any Emoji"
 
-const iii = "Only work with emoji\n emojiyil mathrame work aavukayullu😁"
+const iii = "Only work with emoji"
 
 if (Config.WORKTYPE == 'private') {
 
@@ -32,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 
         var webimage = await axios.get(`https://api.zeks.xyz/api/emoji-image?apikey=SUcKEWdDpYjtj2q045KNQCoDyCe&emoji=${encodeURIComponent(match[1])}&type=apple`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by Eva'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by: Ask Your Mom'})
 
     }));
 
@@ -46,7 +46,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var webimage = await axios.get(`https://api.zeks.xyz/api/emoji-image?apikey=SUcKEWdDpYjtj2q045KNQCoDyCe&emoji=${encodeURIComponent(match[1])}&type=apple`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Mady by EVA'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by: Ask Your Mom'})
 
     }));
 
@@ -56,7 +56,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var webimage = await axios.get(`https://docs-jojo.herokuapp.com/api/emoji2png?emoji=${encodeURIComponent(match[1])}&type=apple`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by EVA'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by: Ask Your Mom'})
 
     }));
 
