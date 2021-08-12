@@ -13,7 +13,7 @@ if (Config.WORKTYPE == 'private') {
 
         var ttinullimage = await axios.get(`https://api.zeks.xyz/api/naruto?apikey=SUcKEWdDpYjtj2q045KNQCoDyCe&text=${encodeURIComponent(match[1])}&text2=Eva`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by jijaji' })
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by: Ask Your Mom' })
 
     }));
 }
@@ -26,7 +26,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var ttinullimage = await axios.get(`https://api.zeks.xyz/api/naruto?apikey=SUcKEWdDpYjtj2q045KNQCoDyCe&text=${encodeURIComponent(match[1])}&text2=Eva`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by jijaji' })
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by: Ask Your Mom' })
 
     }));
     
