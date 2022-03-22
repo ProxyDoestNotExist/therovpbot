@@ -109,12 +109,9 @@ Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (me
       .then(async (response) => {
         const {
           url,
-          judul,
         } = response.data.result
 
         const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
-
-        const msg = `*${CAPTION}*: ${judul}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: "Made By: Ask Your Mom"
