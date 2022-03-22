@@ -105,7 +105,7 @@ Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (me
     await message.sendMessage(infoMessage(LOADING))
 
     await axios
-      .get(`https://videfikri.com/api/fbdl/?urlfb=${userName}`)
+      .get(`https://xteam.xyz/dl/fbv2?url=https://xteam.xyz/dll/fbv2?url=${userName}&APIKEY=ab9942f95c09ca89}`)
       .then(async (response) => {
         const {
           url,
