@@ -45,29 +45,27 @@ if (cn.WORKTYPE == 'private') {
         await message.sendMessage(infoMessage(Lang.LOADING))
 
         await axios
-          .get(`https://videfikri.com/api/igstalk/?username=${userName}`)
+          .get(`https://xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=﻿cristian9407`)
           .then(async (response) => {
             const {
-              profile_hd,
-              username,
-              bio,
-              followers,
-              following,
-              full_name,
-              is_private,
+              Profile_pic,
+              Username,
+              Biodata,
+              Jumlah_Followers,
+              Jumlah_Following,
+              Name,
             } = response.data.result
 
-            const profileBuffer = await axios.get(profile_hd, {
+            const profileBuffer = await axios.get(Profile_pic, {
               responseType: 'arraybuffer',
             })
 
             const msg = `
-            *${Lang.NAME}*: ${full_name}
-            *${Lang.USERNAME}*: ${username}
-            *${Lang.BIO}*: ${bio}
-            *${Lang.FOLLOWERS}*: ${followers}
-            *${Lang.FOLLOWS}*: ${following}
-            *${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC}`
+            *${Lang.NAME}*: ${Name}
+            *${Lang.USERNAME}*: ${Username}
+            *${Lang.BIO}*: ${Biodata}
+            *${Lang.FOLLOWERS}*: ${Jumlah_Followers}
+            *${Lang.FOLLOWS}*: ${Jumlah_Following}`
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
               caption: msg,
@@ -96,29 +94,27 @@ else if (cn.WORKTYPE == 'public') {
         await message.sendMessage(infoMessage(Lang.LOADING))
 
         await axios
-          .get(`https://videfikri.com/api/igstalk/?username=${userName}`)
+          .get(`https://xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=﻿cristian9407`)
           .then(async (response) => {
             const {
-              profile_hd,
-              username,
-              bio,
-              followers,
-              following,
-              full_name,
-              is_private,
+              Profile_pic,
+              Username,
+              Biodata,
+              Jumlah_Followers,
+              Jumlah_Following,
+              Name,
             } = response.data.result
 
-            const profileBuffer = await axios.get(profile_hd, {
+            const profileBuffer = await axios.get(Profile_pic, {
               responseType: 'arraybuffer',
             })
 
             const msg = `
-            *${Lang.NAME}*: ${full_name}
-            *${Lang.USERNAME}*: ${username}
-            *${Lang.BIO}*: ${bio}
-            *${Lang.FOLLOWERS}*: ${followers}
-            *${Lang.FOLLOWS}*: ${following}
-            *${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC}`
+            *${Lang.NAME}*: ${Name}
+            *${Lang.USERNAME}*: ${Username}
+            *${Lang.BIO}*: ${Biodata}
+            *${Lang.FOLLOWERS}*: ${Jumlah_Followers}
+            *${Lang.FOLLOWS}*: ${Jumlah_Following}`
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
               caption: msg,
