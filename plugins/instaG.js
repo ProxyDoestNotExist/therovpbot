@@ -53,7 +53,7 @@ if (cn.WORKTYPE == 'private') {
               Biodata,
               Jumlah_Followers,
               Jumlah_Following,
-              Jumlah_Post
+              Jumlah_Post,
               Name,
             } = response.data.result
 
