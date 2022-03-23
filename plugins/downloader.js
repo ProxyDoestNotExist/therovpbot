@@ -66,7 +66,7 @@ Asena.addCommand({ pattern: 'igimage ?(.*)', fromMe: false, desc: IGI_DESC}, asy
         })
       })
       .catch(
-        async (err) => await message.sendMessage(errorMessage("Invaild Link, Please Enter a Vaild Instagram Link")),
+        async (err) => await message.sendMessage(errorMessage("Under Maintenance")),
       )
   },
 )
