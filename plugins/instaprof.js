@@ -28,7 +28,7 @@ if (cn.WORKTYPE == 'private') {
           .get(`https://videfikri.com/api/igstalk/?username=${userName}`)
           .then(async (response) => {
             const {
-              profile_hd,
+              profile_pic,
               username,
               bio,
               followers,
@@ -37,7 +37,7 @@ if (cn.WORKTYPE == 'private') {
               is_private,
             } = response.data.result
 
-            const profileBuffer = await axios.get(profile_hd, {
+            const profileBuffer = await axios.get(profile_pic, {
               responseType: 'arraybuffer',
             })
 
