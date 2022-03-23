@@ -53,6 +53,7 @@ if (cn.WORKTYPE == 'private') {
               biodata,
               jumlah_Followers,
               jumlah_Following,
+              jumlah_Post
               name,
             } = response.data.result
 
@@ -65,7 +66,8 @@ if (cn.WORKTYPE == 'private') {
             *${Lang.USERNAME}*: ${username}
             *${Lang.BIO}*: ${biodata}
             *${Lang.FOLLOWERS}*: ${jumlah_Followers}
-            *${Lang.FOLLOWS}*: ${jumlah_Following}`
+            *${Lang.FOLLOWS}*: ${jumlah_Following}
+            *${Lang.POSTS}*: ${jumlah_Post}`
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
               caption: msg,
@@ -97,15 +99,16 @@ else if (cn.WORKTYPE == 'public') {
           .get(`https://xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=﻿cristian9407`)
           .then(async (response) => {
             const {
-              Profile_hd,
+              Profile_pic,
               Username,
               Biodata,
               Jumlah_Followers,
               Jumlah_Following,
               Name,
+              Jumlah_Post
             } = response.data.result
 
-            const profileBuffer = await axios.get(Profile_hd, {
+            const profileBuffer = await axios.get(Profile_pic, {
               responseType: 'arraybuffer',
             })
 
@@ -114,7 +117,8 @@ else if (cn.WORKTYPE == 'public') {
             *${Lang.USERNAME}*: ${Username}
             *${Lang.BIO}*: ${Biodata}
             *${Lang.FOLLOWERS}*: ${Jumlah_Followers}
-            *${Lang.FOLLOWS}*: ${Jumlah_Following}`
+            *${Lang.FOLLOWS}*: ${Jumlah_Following}
+            *${Lang.POSTS}*: ${Jumlah_Post}`
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
               caption: msg,
