@@ -21,13 +21,13 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: false, desc: IGV_DESC}, asy
     await message.sendMessage(infoMessage("Downloading your video..."))
 
     await axios
-      .get(`https://bx-hunter.herokuapp.com/api/igdownload?url=${userName}&apikey=FuckBitch`)
+      .get(`https://api.xteam.xyz/dl/igv2?url=${userName}&APIKEY=cristian9407`)
       .then(async (response) => {
         const {
-          linkdownload,
-        } = response.data.result
+          url,
+        } = response.data.result.url[0]
 
-        const profileBuffer = await axios.get(linkdownload, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
 
 
 
