@@ -48,24 +48,24 @@ if (cn.WORKTYPE == 'private') {
           .get(`https://xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=﻿cristian9407`)
           .then(async (response) => {
             const {
-              Profile_pic,
-              Username,
-              Biodata,
-              Jumlah_Followers,
-              Jumlah_Following,
-              Name,
+              profile_pic,
+              username,
+              biodata,
+              jumlah_Followers,
+              jumlah_Following,
+              name,
             } = response.data.result
 
-            const profileBuffer = await axios.get(Profile_pic, {
+            const profileBuffer = await axios.get(profile_pic, {
               responseType: 'arraybuffer',
             })
 
             const msg = `
-            *${Lang.NAME}*: ${Name}
-            *${Lang.USERNAME}*: ${Username}
-            *${Lang.BIO}*: ${Biodata}
-            *${Lang.FOLLOWERS}*: ${Jumlah_Followers}
-            *${Lang.FOLLOWS}*: ${Jumlah_Following}`
+            *${Lang.NAME}*: ${name}
+            *${Lang.USERNAME}*: ${username}
+            *${Lang.BIO}*: ${biodata}
+            *${Lang.FOLLOWERS}*: ${jumlah_Followers}
+            *${Lang.FOLLOWS}*: ${jumlah_Following}`
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
               caption: msg,
