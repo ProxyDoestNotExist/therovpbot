@@ -97,7 +97,7 @@ else if (cn.WORKTYPE == 'public') {
           .get(`https://xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=﻿cristian9407`)
           .then(async (response) => {
             const {
-              Profile_pic,
+              Profile_hd,
               Username,
               Biodata,
               Jumlah_Followers,
@@ -105,7 +105,7 @@ else if (cn.WORKTYPE == 'public') {
               Name,
             } = response.data.result
 
-            const profileBuffer = await axios.get(Profile_pic, {
+            const profileBuffer = await axios.get(Profile_hd, {
               responseType: 'arraybuffer',
             })
 
