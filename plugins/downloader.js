@@ -42,35 +42,6 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: false, desc: IGV_DESC}, asy
 )
 
 
-Asena.addCommand({ pattern: 'igimage ?(.*)', fromMe: false, desc: IGI_DESC}, async (message, match) => {
-
-    const userName = match[1]
-
-    if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
-
-    await message.sendMessage(infoMessage("Downloading your image..."))
-
-    await axios
-      .get(`https://api.xteam.xyz/dl/igv2?url=${userName}&APIKEY=cristian9407`)
-      .then(async (response) => {
-        const {
-          url,
-        } = response.data.result.url[0]
-
-        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
-
-
-
-	await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-          caption: "Made By: Ask Your Mom"
-        })
-      })
-      .catch(
-        async (err) => await message.sendMessage(errorMessage("Under Maintenance")),
-      )
-  },
-)
-
 
 Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (message, match) => {
 
