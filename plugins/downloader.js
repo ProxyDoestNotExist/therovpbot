@@ -12,35 +12,6 @@ const LOADING = "Downloading the Video..."
 const NOT_FOUNDFB = "Under Maintenance"
 const CAPTION = "Caption"
 
-Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: false, desc: IGV_DESC}, async (message, match) => {
-
-    const userName = match[1]
-
-    if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
-
-    await message.sendMessage(infoMessage("Downloading your video..."))
-
-    await axios
-      .get(`https://api.xteam.xyz/dl/igv2?url=${userName}&APIKEY=cristian9407`)
-      .then(async (response) => {
-        const {
-          url,
-        } = response.data.result.url[0]
-
-        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
-
-
-
-	await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-          caption: "Made By: Ask Your Mom"
-        })
-      })
-      .catch(
-        async (err) => await message.sendMessage(errorMessage("Invaild Link, Please Enter a Vaild Instagram Link")),
-      )
-  },
-)
-
 
 
 Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (message, match) => {
