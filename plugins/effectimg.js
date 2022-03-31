@@ -1,3 +1,5 @@
+/*
+
 const Asena = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
@@ -582,3 +584,6 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 }
+
+
+*/
