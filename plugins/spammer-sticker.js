@@ -1,3 +1,5 @@
+/*
+
 const Asena = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
@@ -4551,3 +4553,6 @@ Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: Lang.ST_DESC }, 
 
         });
 }));
+
+
+*/
