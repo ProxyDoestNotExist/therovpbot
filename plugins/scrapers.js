@@ -558,6 +558,8 @@ if (config.WORKTYPE == 'private') {
         });
     }));
 
+
+/*
     Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
 
         const userName = match[1]
@@ -602,6 +604,8 @@ if (config.WORKTYPE == 'private') {
           )
       },
     )
+
+*/
 
     Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true }, (async (message, match) => { 
 
@@ -1025,6 +1029,8 @@ else if (config.WORKTYPE == 'public') {
         });
     }));
 
+
+/*
     Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC }, async (message, match) => {
 
         const userName = match[1]
@@ -1069,6 +1075,8 @@ else if (config.WORKTYPE == 'public') {
           )
       },
     )
+
+*/
 
     Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: false }, (async (message, match) => {
 
