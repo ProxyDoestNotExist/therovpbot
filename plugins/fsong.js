@@ -1,3 +1,5 @@
+/*
+
 const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 
@@ -40,3 +42,6 @@ Asena.addCommand({pattern: 'find', fromMe: false, desc: FIND_DESC }, (async (mes
     });
 
 }));
+
+
+*/
