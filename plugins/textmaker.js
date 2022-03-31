@@ -7,7 +7,6 @@ Github: https://github.com/phaticusthiccy/TextMaker-Unlimited
 
 This code works with unlimited and completely free an API scraper.
 Don't use it for illegal purposes.
-*/
 
 const thiccysapi = require('textmaker-thiccy'); // Import NPM Package
 
@@ -761,3 +760,5 @@ Asena.addCommand({pattern: 'textcup ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
+
+*/
