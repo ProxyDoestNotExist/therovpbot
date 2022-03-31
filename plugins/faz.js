@@ -1,3 +1,5 @@
+/*
+
 /* Codded by @afnanplk-farhandqz
 Telegram: t.me/phaticusthiccy
 Instagram: www.instagram.com/kyrie.baran
@@ -239,3 +241,5 @@ Asena.addCommand({pattern: 'break ?(.*)', fromMe: false, dontAddCommandList: tru
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.video, {mimetype: Mimetype.mp4, caption: '```Made by: Ask Your Mom```'})
 
     }));
+
+*/
