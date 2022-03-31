@@ -1,3 +1,5 @@
+/*
+
 const Asena = require('../events');
 const { MessageType } = require('@adiwajshing/baileys');
 const axios = require('axios');
@@ -36,3 +38,5 @@ Asena.addCommand({ pattern: 'pint ?(.*)', fromMe: false,  desc: "Gives you a pic
   },
 
  )
+
+*/
