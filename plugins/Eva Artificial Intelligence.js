@@ -1,3 +1,5 @@
+/*
+
 /* Codded by Phaticusthiccy
 
 Eva, The Phaticusthiccy's Multifunctional Artificial Intelligence
@@ -363,3 +365,6 @@ Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true, us
         }
     }
 }));
+
+
+*/
