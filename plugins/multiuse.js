@@ -1,3 +1,5 @@
+/*
+
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 /*const got = require('got');
@@ -55,3 +57,5 @@ if (match[1].includes(';')) {
       )*/
   },
 )
+
+*/
