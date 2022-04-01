@@ -418,7 +418,7 @@ if (config.WORKTYPE == 'private') {
                 text: ttsMessage,
                 voice: LANG
             });
-            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true} {
+            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true}, {
             quoted: message.data,});
         }));
     }
