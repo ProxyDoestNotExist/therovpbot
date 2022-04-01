@@ -44,7 +44,9 @@ if (Config.WORKTYPE == 'private') {
                     throw err;
                 }
         
-                await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+                await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker, {
+                quoted: message.data,
+            });
             });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -84,7 +86,9 @@ else if (Config.WORKTYPE == 'public') {
                     throw err;
                 }
         
-                await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+                await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker, {
+                quoted: message.data,
+            });
             });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
