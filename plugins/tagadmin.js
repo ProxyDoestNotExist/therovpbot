@@ -21,7 +21,7 @@ if (Config.WORKTYPE == 'private') {
                 jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
             }
         });
-        await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+        await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0, quoted: message.data})
     }));
 }
 else if (Config.WORKTYPE == 'public') {
@@ -35,6 +35,6 @@ else if (Config.WORKTYPE == 'public') {
                 jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
             }
         });
-        await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+        await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0, quoted: message.data})
     }));
 }
