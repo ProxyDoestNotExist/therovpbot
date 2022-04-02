@@ -19,6 +19,6 @@ Asena.addCommand({pattern: 'insult ?(.*)', fromMe: false,}, async (message, matc
 		const json = JSON.parse(response.body);
 		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*👿🤬 ' + Lang.EVINS +'* ```' + json.insult + '```\n\n', MessageType.text);
 	} catch {
-		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDAC, MessageType.text);
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDAC, MessageType.text, {quoted: message.data});
 	}
 });
