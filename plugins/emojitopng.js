@@ -32,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 
         var webimage = await axios.get(`https://api.zeks.xyz/api/emoji-image?apikey=SUcKEWdDpYjtj2q045KNQCoDyCe&emoji=${encodeURIComponent(match[1])}&type=apple`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by: Ask Your Mom'})
+        await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by: Ask Your Mom', quoted: message.data})
 
     }));
 
