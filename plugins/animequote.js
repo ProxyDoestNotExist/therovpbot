@@ -18,8 +18,8 @@ Asena.addCommand({pattern: 'animequote ?(.*)', fromMe: false, desc: AQUOTE_DESC}
 		const json = JSON.parse(response.body);
 		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*🔖 ' + QUOTE +'* ```' + json.quote + '```\n\n' +
 		'*🔖' + CHARACTER +'* ```' + json.character+ '```\n\n' +
-		'*🔖' + ANIME +'* ```' + json.anime+ '```\n', MessageType.text);
+		'*🔖' + ANIME +'* ```' + json.anime+ '```\n', MessageType.text, {quoted: message.data});
 	} catch {
-		return await message.client.sendMessage(message.jid, NOT_FOUNDA, MessageType.text);
+		return await message.client.sendMessage(message.jid, NOT_FOUNDA, MessageType.text, {quoted: message.data});
 	}
 });
