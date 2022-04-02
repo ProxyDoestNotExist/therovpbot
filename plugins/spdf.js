@@ -17,6 +17,6 @@ Asena.addCommand({pattern: 'spdf ?(.*)', fromMe: false, desc: SPDF_DESC }, (asyn
 
     await message.sendMessage(SPDF_PROC);
 
-    await message.sendMessage(Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf})
+    await message.sendMessage(Buffer.from(webimage.data), MessageType.document, {mimetype: Mimetype.pdf, quoted: message.data})
 
 })); 
