@@ -80,7 +80,7 @@ if (Config.WORKTYPE == 'private') {
         ffmpeg(location)
             .save('output.mp3')
             .on('end', async () => {
-                await message.client.sendMessage(mid, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+                await message.client.sendMessage(mid, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -101,7 +101,7 @@ if (Config.WORKTYPE == 'private') {
             .fromFormat('webp_pipe')
             .save('output.jpg')
             .on('end', async () => {
-                await message.client.sendMessage(mid, fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
+                await message.client.sendMessage(mid, fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made By: Ask Your Mom', quoted: message.data});
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -145,7 +145,7 @@ else if (Config.WORKTYPE == 'public') {
         ffmpeg(location)    
             .save('output.mp3')
             .on('end', async () => {
-                await message.client.sendMessage(mid, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+                await message.client.sendMessage(mid, fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -166,11 +166,11 @@ else if (Config.WORKTYPE == 'public') {
             .fromFormat('webp_pipe')
             .save('output.jpg')
             .on('end', async () => {
-                await message.client.sendMessage(mid, fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
+                await message.client.sendMessage(mid, fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made By: Ask Your Mom', quoted: message.data});
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-    Asena.addCommand({pattern: 'vsticker$', desc: Lang.ANİM_STİCK, fromMe: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'vsticker$', desc: Lang.ANİM_STİCK, fromMe: false}, (async (message, match) => {
         const mid = message.jid
         if (message.reply_message === false) return await message.sendMessage(Lang.STİCKER_NEEDREPLY);
         await message.client.sendMessage(mid, Lang.ANİMATE, MessageType.text)
@@ -185,10 +185,11 @@ else if (Config.WORKTYPE == 'public') {
             await Axios({ method: "GET", url: rest.result, responseType: "stream"}).then(({ data }) => {
                 const saving = data.pipe(fs.createWriteStream('/root/WhatsAsenaDuplicated/stweb.mp4'))
                 saving.on("finish", async () => {
-                    await message.client.sendMessage(mid, fs.readFileSync('/root/WhatsAsenaDuplicated/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: 'Made by WhatsAsena', quoted: message.data })
+                    await message.client.sendMessage(mid, fs.readFileSync('/root/WhatsAsenaDuplicated/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: 'Made By: Ask Your Mom', quoted: message.data })
                     if (fs.existsSync(savedFilename)) fs.unlinkSync(savedFilename)
                     if (fs.existsSync('/root/WhatsAsenaDuplicated/stweb.mp4')) fs.unlinkSync('/root/WhatsAsenaDuplicated/stweb.mp4')
                 })
             })
         })
     }));
+}
