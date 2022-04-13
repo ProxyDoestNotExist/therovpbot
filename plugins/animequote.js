@@ -10,7 +10,7 @@ const CHARACTER = "Character :"
 const ANIME = "Anime :"
 const NOT_FOUNDA = "```Gomen Nasai,I could not find a quote. :(```"
 
-Asena.addCommand({pattern: 'animequote$', fromMe: false, desc: AQUOTE_DESC}, async (message, match) => {
+Asena.addCommand({pattern: 'aniquote', fromMe: false, desc: AQUOTE_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(NEED_LOCATIONA);
 	const url = `https://animechan.vercel.app/api/random`;
 	try {
