@@ -1,7 +1,7 @@
 /*
-# Copyright (C) 2020 MuhammedKpln.
+# Copyright (C) 2022.
 #
-# Maya BoT is free software: you can redistribute it and/or modify
+# DarkShadow is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
@@ -17,13 +17,13 @@
 */
 
 function successfullMessage(msg) {
-    return "✅ *DS BOT*:  ```" + msg + "```"
+    return "✅ *DarkShadow*:  ```" + msg + "```"
 }
 function errorMessage(msg) {
-    return "🛑 *DS BOT*:  ```" + msg + "```"
+    return "🛑 *DarkShadow*:  ```" + msg + "```"
 }
 function infoMessage(msg) {
-    return "⏺️ *DS BOT*:  ```" + msg + "```"
+    return "⏺️ *DarkShadow*:  ```" + msg + "```"
 }
 
 
